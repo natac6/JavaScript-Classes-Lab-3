@@ -1,0 +1,49 @@
+class Hamster {
+    constructor(name) {
+      this.owner = ''; // Initially set as an empty string
+      this.name = name; // Set the name from the parameter in the constructor method
+      this.price = 30; // Set as 30
+    }
+ 
+    wheelRun() {
+      console.log("squeak squeak");
+    }
+ 
+    eatFood() {
+      console.log("nibble nibble");
+    }
+ 
+    getPrice() {
+      return this.price;
+    }
+  }
+ 
+ 
+  const myHamster = new Hamster("Fluffy");
+  myHamster.wheelRun(); // Output: squeak squeak
+  myHamster.eatFood(); // Output: nibble nibble
+  console.log(myHamster.getPrice()); // Output: 15
+ class Dinner {
+   constructor(appetizer, entree, dessert) {
+     this.appetizer = appetizer;
+     this.entree = entree;
+     this.dessert = dessert;
+   }
+ }
+ 
+ class Chef {
+   static makeDinner(appetizer, entree, dessert) {
+     return new Dinner(appetizer, entree, dessert);
+   }
+ }
+ 
+ // Creating three dinners using the Chef
+ const dinner1 = Chef.makeDinner('Salad', 'Grilled Chicken', 'Chocolate Cake');
+ const dinner2 = Chef.makeDinner('Bruschetta', 'Pasta Carbonara', 'Tiramisu');
+ const dinner3 = Chef.makeDinner('Spinach Dip', 'Steak', 'Cheesecake');
+ 
+ // Logging the dinners
+ console.log(dinner1);
+ console.log(dinner2);
+ console.log(dinner3);
+ 
